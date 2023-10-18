@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hidden Fields</title>
+</head>
+<body>
+    <form action="" method="get">
+        <!--visible fields start here-->
+        {% for field in form.visible_fields %}
+        {{field.label_tag}}
+        {{field}}
+        {% endfor %}
+        <!--visible fields end here-->
+
+        <!--hidden fields start here-->
+        {% for hidden in form.hidden_fields %}
+        {{hidden}}
+        {% endfor %}
+        <!--hidden fields end here-->
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
