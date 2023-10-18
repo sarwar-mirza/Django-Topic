@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--Load static file start here-->
+{% load static %}
+<!--Load static file ends here-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} </title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!--static css link start here -->
+    <link rel="stylesheet" href="{% static 'course/css/style.css' %}">
+    <!--static css link ends here -->
+</head>
+<body>
+    <h1>Course Name: {{cname}} </h1>
+    <!--static img tag start here-->
+    <img src="{% static 'course/images/work1.jpg' %}" alt="work1 images">
+    <img src="{% get_static_prefix %}course/images/work1.jpg" alt="wort images prefix">
+    <!--static img tag ends here-->
+    <hr>
+    <form action="">
+        <input type="button" value="Click Me" onclick="disp()">
+    </form>
+    <!--JavaScript start here-->
+    <script src="{% static 'course/js/all.js' %}"></script>
+    <!--JavaScript ends here-->
+</body>
+</html>

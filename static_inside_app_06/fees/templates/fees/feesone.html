@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--Load staic start here-->
+{% load static %}
+<!--Load staic ends her--> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <!--css linke start here-->
+    <link rel="stylesheet" href="{% static 'fees/css/style.css' %}">
+    <!--css linke ends here-->
+</head>
+<body>
+    <h1>Course Name: {{cname}}</h1>
+    <h1>Course Fees: {{charge}}</h1>
+    <!--static img tag start here-->
+    <img src="{% static 'fees/images/work2.jpg' %}" alt="work2 images">
+    <img src="{% get_static_prefix %}fees/images/work2.jpg" alt="work2 img">
+    <!--static img tag ends here-->
+    <hr>
+    <form action="">
+        <input type="button" value="Click me " onclick="disp()">
+    </form>
+    <!--javaScript start here-->
+    <script src="{% static 'fees/js/all.js' %}"></script>
+    <!--javaScript ends here-->
+</body>
+</html>
