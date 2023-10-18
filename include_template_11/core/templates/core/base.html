@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %} </title>
+
+    <!--Font Awesome start here-->
+    <link rel="stylesheet" href="{% static 'core/css/fontawesome.css' %}">
+    <!--Font Awesome ends here-->
+
+    <!--Bootstrap start here-->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <!--Bootstrap ends here-->
+
+    <!--Base css start here-->
+    {% block core_css %}
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock core_css %}
+    <!--Base css ends here-->
+</head>
+<body>
+    <!--nav menu start here-->
+    {% include 'core/navbar.html' %}
+    <!--nav menu ends here-->
+
+    {% block content %} {% endblock content %}
+
+    <!--Button start here-->
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <!--button ends here-->
+
+    <!--Font awesome start here-->
+    <i class="fa-solid fa-paintbrush"></i>
+    <!--Font awesome ends here-->
+
+    <!--include topcourse start here-->
+    {% include  'core/topcourse.html' with d='Django'  %}
+    <!--include topcourse ends here-->
+
+    <!--Bootstrap javaScript jquery font start here-->
+    <script src="{% static 'core/js/jquery.js' %}"></script>
+    <script src="{% static 'core/js/popper.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    <!--Bootstrap javaScript jquery font ends here-->
+</body>
+</html>
