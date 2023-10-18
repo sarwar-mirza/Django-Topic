@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predefined for loop</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!--Apply this same conditon [forloop.counter0, forloop.first, forloop.last, forloop.revcounter] -->
+    <h1> forloop.counter Ex-01</h1>
+    {% for ele in names %}
+    {{forloop.counter}} {{ele}} <br>   <!--as like index number -->
+    {% endfor %}
+
+    <h1>Nested for loop forloop.parentloop Ex-02</h1>
+    <p>Please feesthree.html file Run becuse importent file</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested for loop</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Access one by one Ex-01</h1>
+    <h4> {{student}} </h4><br>
+
+    <h4> {{student.stu1}} </h4>
+    <h4> {{student.stu2}} </h4>
+    <h4> {{student.stu3}} </h4>
+    <h4> {{student.stu4}} </h4>
+    <h4> {{student.stu5}} </h4>
+    <h4> {{student.stu6}} </h4><br>
+
+    <h4> {{student.stu1.name}} </h4>
+    <h4> {{student.stu1.roll}} </h4><br>
+
+    <h1>Dictionary pair(key, vlaue) Ex-02</h1>
+    {% for k, v in student.items %}
+    <ul>
+        <li>{{k}} : {{v}} </li><br>
+    </ul>
+    {% endfor %} <br>
+
+    <h1> Nested for loop Ex-03</h1>
+    {% for key, value in student.items %}
+    {% for k, v in value.items %}
+    {{k}} ={{v}} <br>
+    {% endfor %}
+    {% endfor %} <br>
+
+    <h1> forloop.counter Ex-04</h1>
+    {% for key, value in student.items %}
+    {% for k, v in value.items %}
+    {{forloop.parentloop.counter}} {{k}} ={{v}} <br>
+    {% endfor %}
+    {% endfor %}
+</body>
+</html>

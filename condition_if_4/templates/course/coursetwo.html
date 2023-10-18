@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter an Condition</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>condition with filter</h1>
+    {% if nm|length >= 4 %}           <!--Filter -->
+    <h3>Hello {{nm}} </h3>
+    {% endif %}
+
+    <h1>if else statement</h1>
+    {% if nm %}
+    <h3>Hello {{nm}} </h3>
+    {% else %}
+    <h3>No course available</h3>
+    {% endif %}
+
+    <h1>if else statement when condition false</h1>
+    {% if nm == 'Django' %}
+    <h3>Hello {{nm}} </h3>
+    {% else %}
+    <h3>No course availabel</h3>
+    {% endif %}
+
+    <h1>if elif statement</h1>
+    {% if nm %}
+    <h3>Hello {{nm}} </h3>
+    {% elif st %}
+    <h3>Total Seats: {{st}} </h3>
+    {% else %}
+    <h3>No Course availabel</h3>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Statement</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>If Statement</h1>
+    {% if nm %}
+    <h3>Course Name: {{nm}} </h3>
+    {% endif %}
+
+    <h1>and operator</h1>
+    {% if nm and se %}
+    <h3>{{se}} seats are avilable for {{nm}} course </h3>
+    {% endif %}
+
+    <h1>or operator</h1>
+    {% if nm or se %}
+    <h3>{{se}} seats are available for {{nm}} course </h3>
+    {% endif %}
+
+    <h1>not operator</h1>
+    {% if not se %}
+    <h3>seats not available</h3>
+    {% endif %}
+
+    <h1>equal</h1>
+    {% if nm == 'Django' %}
+    <h3>Hello {{nm}} </h3>
+    {% endif %}
+
+    <h1>equal and</h1>
+    {% if nm == 'Django' and se == 10 %}
+    <h3>{{se}} seats are available for {{nm}} course </h3>
+    {% endif %}
+</body>
+</html>

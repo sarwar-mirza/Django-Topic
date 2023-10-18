@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop condition</title>
+    <style>
+        body{
+            background-color: brown;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>For loop condition -01</h1>
+    {% for ele in names %}
+    {{ele}} <br>
+    {% endfor %}
+
+    <h1>For loop conditon -02</h1>
+    <ul>
+        {% for nm in names %}
+        <li>{{nm}} </li>
+        {% endfor %}
+    </ul>
+
+    <h1>for loop empty conditon -03</h1>
+    <ol>
+        {% for n in names %}
+        <li>{{n}} </li>
+        {% empty %}
+        <h3>Data is not availabel</h3>
+        {% endfor %}
+    </ol>
+</body>
+</html>
