@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Infromation</title>
+    <style>
+        body{
+            background-color: brown;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Orginal Dictionary:{{learn}} </h1>
+    {% for key, value in learn.items %}
+    {{value}} <br>
+    {% for k, v in value.items %}
+    {{forloop.parentloop.counter}}. {{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %}
+</body>
+</html>
