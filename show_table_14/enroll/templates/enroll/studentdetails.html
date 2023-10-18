@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Table</title>
+    <style>
+        th,td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{stu}} </h1>
+    <!--jadi data thake ta hole ai vabhe table create kore data show kore dekha jabe -->
+    {% if stu %}
+    <table>
+        <tr>
+            <th>Serial No</th>
+            <th>ID No</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        {% for st in stu %}
+        <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.stu_id}}</td>
+            <td>{{st.stu_name}}</td>
+            <td>{{st.stu_dept}}</td>
+            <td>{{st.stu_email}}</td>
+            <td>{{st.stu_pass}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
