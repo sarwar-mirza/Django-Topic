@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <form action="" method="get">
+        <table>
+            {{form}}
+        </table>
+        <input type="button" value="Submit">
+    </form>
+    <hr>
+
+    <!--user show in another representation-->
+    <!--Ex-02-->
+    <form action="" method="get">
+        {{form.as_table}}
+        <input type="button" value="Submit">
+    </form>
+    <hr>
+
+    <!--Ex-03-->
+    <form action="" method="get">
+        {{form.as_p}}
+        <input type="button" value="Submit">
+    </form>
+    <hr>
+
+    <!--Ex-04-->
+    <form action="" method="get">
+        {{form.as_ul}}
+        <input type="button" value="Submit">
+    </form>
+    <hr>
+
+    <!--Ex-05-->
+    <form action="" method="get">
+        {{form.name}}
+        {{form.email}}
+        <input type="button" value="Submit">
+    </form>
+    <hr>
+</body>
+</html>
