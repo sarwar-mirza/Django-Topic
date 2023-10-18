@@ -1,0 +1,11 @@
+body{
+    background-color: antiquewhite;
+}
+h1{
+    color: brown;
+}
+.profile_image img{
+    width: 500px;
+    margin-right: 60px;
+    float: left;
+}

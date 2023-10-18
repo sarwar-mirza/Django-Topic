@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} </title>
+    <!--static css start here-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!--static css ends here-->
+</head>
+<body>
+    <h1> {{cname}} </h1>
+    <!--static image start here-->
+    <div class="profile_image">
+        <img src="{% static 'images/work1.jpg' %} " alt="work1 image" srcset="">
+        <img src="{% get_static_prefix %}images/work2.jpg" alt="work2 image" srcset=""> 
+    </div>
+    <!--static image ends here-->
+    <hr>
+    <form action="">
+        <input type="button" value="Click Me" onclick="disp()">
+    </form>
+
+    <!--javascript start here-->
+    <script src="{% static 'js/all.js' %}"></script>
+    <!--javascript ends here-->
+</body>
+</html>
