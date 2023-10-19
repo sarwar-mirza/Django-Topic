@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Session</title>
+</head>
+<body>
+    <h2>Get session...</h2>
+    {{name}} <br>
+    {% for key in keys %}
+    key_name : {{key}} <br>
+    {% endfor %}<br> <hr>
+    <!--items() method  ex-02
+    {% for key, value in items %}
+    key_name : {{key}} <br>
+    value :  {{value}} <br>
+    {% endfor %} <br> <hr>
+
+    {{age}}
+    -->
+    <!--expery session cookie ex-03 -->
+    {{request.session.get_session_cookie_age}} <br>
+    {{request.session.get_expiry_age}} <br>
+    {{request.session.get_expiry_date}} <br>
+    {{request.session.get_expire_at_browser_close}} <br>
+    {{request.session.test_cookie_worked}}
+</body>
+</html>
