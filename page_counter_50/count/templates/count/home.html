@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--meta auto time set refresh start here-->
+    <meta http-equiv="refresh" content="1">
+    <!--meta auto time set refresh end here-->
+    <title>{% block title %}Page counter {% endblock title %}</title>
+    <!--Bootstrap css link start here-->
+    <link rel="stylesheet" href="{% static 'count/css/bootstrap.min.css' %}">
+    <!--Bootstrap css link end here-->
+
+    <!--font awesome link start here-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <!--font awesome link ent here-->
+
+    <style>
+        h1{
+            font-family: 'Dancing Script', cursive;
+            
+        }
+        body, html{
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="container d-flex align-items-center justify-content-center h-100">
+        <h1 class="text-warning display-2">Page Count: 
+            <span class="text-white">{{newCount}}</span>
+        </h1>
+        
+    </div>
+    <!--Bootstrap, Jquery, popper Javascript link start here-->
+    <script src="{% static 'count/js/jquery.js' %}"></script>
+    <script src="{% static 'count/js/popper.js' %}"></script>
+    <script src="{% static 'count/js/bootstrap.min.js' %}"></script>
+    <!--Bootstrap, Jquery, popper Javascript link end here-->
+</body>
+</html>
