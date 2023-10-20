@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-table Inheritance</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--Student Information-->
+    <table>
+        <h2>Student Information</h2>
+        <th>Id</th>
+        <th>Exam Hall</th>
+        <th>City</th>
+        <th>Name</th>
+        <th>Roll</th>
+
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.cname}}</td>
+            <td>{{student.city}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+        </tr>
+        {% endfor %}
+    </table> <hr>
+    <!--Exam Center Information-->
+    <table>
+        <h2>Exam Center</h2>
+        <th>Id</th>
+        <th>Exam Hall</th>
+        <th>City</th>
+
+        {% for exam in exams %}
+        <tr>
+            <td>{{exam.id}}</td>
+            <td>{{exam.cname}}</td>
+            <td>{{exam.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
