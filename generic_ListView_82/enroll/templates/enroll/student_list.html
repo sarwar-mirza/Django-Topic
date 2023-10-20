@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic ListView</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Default ListView</h3>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Course</th>
+
+        {% for stu in student_list %}
+        <tr>
+            <th>{{stu.id}}</th>
+            <th>{{stu.name}}</th>
+            <th>{{stu.roll}}</th>
+            <th>{{stu.course}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

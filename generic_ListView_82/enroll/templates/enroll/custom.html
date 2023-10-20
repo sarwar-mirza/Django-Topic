@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generic ListView</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Custom ListView</h3>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Course</th>
+
+        {% for stu in students %}
+        <tr>
+            <th>{{stu.id}}</th>
+            <th>{{stu.name}}</th>
+            <th>{{stu.roll}}</th>
+            <th>{{stu.course}}</th>
+        </tr>
+        {% endfor %}
+    </table> <hr>
+
+    <table>
+        <h3>Using Order_by = ['name'] in get_context_data method</h3>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Course</th>
+
+        {% for fres in freshers %}
+        <tr>
+            <th>{{fres.id}}</th>
+            <th>{{fres.name}}</th>
+            <th>{{fres.roll}}</th>
+            <th>{{fres.course}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
