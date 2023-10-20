@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DetailView</title>
+</head>
+<body>
+    <h3>Student information</h3>
+    {{student.id}}
+    {{student.name}}
+    {{student.roll}}
+    {{student.course}} <hr>
+
+    {% for stu in all_student %}
+   <h5>
+    <li>
+        <a href="{% url 'studentdetail' stu.id %}">{{stu.name}}</a>
+    </li>
+   </h5>
+    {% endfor %}
+</body>
+</html>
