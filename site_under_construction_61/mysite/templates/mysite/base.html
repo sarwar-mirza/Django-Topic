@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS Start Here-->
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.min.css' %}">
+    <!--Bootstrap CSS END Here-->
+    <title>{% block title %} Base Page {% endblock title%}</title>
+</head>
+<body class="bg-secondary">
+    <!--Navbar start here-->
+    {% include 'mysite/navbar.html' %}
+    <!--Navbar end here-->
+
+    <div class="container">
+        <div class="row">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+    
+    <!--Jquery, Popper, Bootstrap JavaScript start Here-->
+    <script src="{% static 'mysite/js/jquery.js' %}"></script>
+    <script src="{% static 'mysite/js/popper.js' %}"></script>
+    <script src="{% static 'mysite/js/bootstrap.min.js' %}"></script>
+    <!--Jquery, Popper, Bootstrap JavaScript End Here-->
+</body>
+</html>
