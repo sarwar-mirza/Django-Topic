@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Manager</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h2>Student Information</h2>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Roll</th>
+
+        {% for student in students %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
