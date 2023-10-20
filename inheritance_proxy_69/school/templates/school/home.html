@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Model</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h2>Exam Center Information - Orginal</h2>
+        <th>Id</th>
+        <th>CName</th>
+        <th>City</th>
+
+        {% for exam in exams %}
+        <tr>
+            <td>{{exam.id}}</td>
+            <td>{{exam.cname}}</td>
+            <td>{{exam.city}}</td>
+        </tr>
+        {% endfor %}
+    </table> <hr>
+
+    <table>
+        <h2>My Exam Center Information - Proxy</h2>
+        <th>Id</th>
+        <th>CName</th>
+        <th>City</th>
+
+        {% for myexam in myexams %}
+        <tr>
+            <td>{{myexam.id}}</td>
+            <td>{{myexam.cname}}</td>
+            <td>{{myexam.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
